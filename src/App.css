@@ -75,7 +75,7 @@ a {
 
 /* HERO */
 .hero {
-  background: linear-gradient(rgba(10, 45, 110, 0.75), rgba(10, 45, 110, 0.75)), url('/hero.jpg') center center / cover no-repeat;
+  background: linear-gradient(rgba(10, 45, 110, 0.45), rgba(10, 45, 110, 0.45)), url('/hero.jpg') center center / cover no-repeat;
   color: #fff;
   padding: 90px 20px;
   text-align: center;
