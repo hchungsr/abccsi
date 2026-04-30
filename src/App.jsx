@@ -224,10 +224,10 @@ function App() {
             </div>
             <form className="contact-form" action="https://formspree.io/f/xjglboge" method="POST">
               <h3>Send Us a Message</h3>
-              <input type="text" placeholder="Your Name" required />
-              <input type="tel" placeholder="Your Phone Number" />
-              <input type="email" placeholder="Your Email" />
-              <textarea placeholder="Describe your issue..." rows="4" required></textarea>
+              <input type="text" name="name" placeholder="Your Name" required />
+              <input type="tel" name="phone" placeholder="Your Phone Number" />
+              <input type="email" name="email" placeholder="Your Email" />
+              <textarea name="message" placeholder="Describe your issue..." rows="4" required></textarea>
               <input type="hidden" name="_subject" value="New message from abccsi.com" />
               <button type="submit" className="btn-primary">Send Message</button>
             </form>
