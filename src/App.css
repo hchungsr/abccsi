@@ -962,3 +962,240 @@ a {
   .section { padding: 60px 18px; }
   .hero-btns { flex-direction: column; align-items: center; }
 }
+
+/* ── SERVICES PAGE ── */
+
+.sp-hero {
+  background: linear-gradient(135deg, #071e4a 0%, #0a2d6e 45%, #1a4fa8 100%);
+  color: #fff;
+  padding: 96px 24px 88px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.sp-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 40% 60%, rgba(5,150,105,0.2) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.sp-hero-content {
+  max-width: 760px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.sp-hero-content h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin: 16px 0 20px;
+  letter-spacing: -1.5px;
+  line-height: 1.1;
+}
+
+.sp-hero-content p {
+  font-size: 1.1rem;
+  color: #c5daf5;
+  margin-bottom: 36px;
+  line-height: 1.7;
+}
+
+/* Stats strip */
+.sp-intro {
+  background: #fff;
+  border-bottom: 1px solid #e2ebf8;
+  padding: 28px 24px;
+  box-shadow: 0 2px 8px rgba(10,45,110,0.06);
+}
+
+.sp-intro-grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.sp-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px 36px;
+  text-align: center;
+}
+
+.sp-stat strong {
+  font-size: 1.9rem;
+  font-weight: 900;
+  color: #059669;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.sp-stat span {
+  font-size: 12px;
+  color: #555;
+  font-weight: 500;
+  max-width: 140px;
+  line-height: 1.4;
+}
+
+.sp-stat-divider {
+  width: 1px;
+  height: 44px;
+  background: #d4e2f7;
+}
+
+/* Services grid */
+.sp-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 28px;
+}
+
+.sp-card {
+  background: #fff;
+  border: 1px solid #dce8fb;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 16px rgba(10,45,110,0.07);
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+
+.sp-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 40px rgba(10,45,110,0.13);
+}
+
+.sp-card-header {
+  padding: 28px 28px 24px;
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+.sp-card-icon {
+  font-size: 2.4rem;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.sp-card-header-text h2 {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 4px;
+  line-height: 1.2;
+}
+
+.sp-tagline {
+  font-size: 13px;
+  color: rgba(255,255,255,0.8);
+  font-weight: 500;
+  font-style: italic;
+}
+
+.sp-card-body {
+  padding: 24px 28px 28px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.sp-desc {
+  font-size: 14.5px;
+  color: #4a5568;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.sp-features {
+  list-style: none;
+  margin-bottom: 24px;
+  flex: 1;
+}
+
+.sp-features li {
+  padding: 5px 0 5px 22px;
+  position: relative;
+  font-size: 14px;
+  color: #374151;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.sp-features li:last-child { border-bottom: none; }
+
+.sp-features li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  font-weight: 700;
+  color: #059669;
+}
+
+.sp-cta-link {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 700;
+  color: #1a6dd4;
+  transition: color 0.2s;
+  margin-top: auto;
+}
+
+.sp-cta-link:hover { color: #0a2d6e; }
+
+/* Why choose us */
+.sp-why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 24px;
+}
+
+.sp-why-card {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 14px;
+  padding: 32px 24px;
+  text-align: center;
+  transition: background 0.2s;
+}
+
+.sp-why-card:hover { background: rgba(255,255,255,0.1); }
+
+.sp-why-icon {
+  font-size: 2.2rem;
+  margin-bottom: 14px;
+}
+
+.sp-why-card h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.sp-why-card p {
+  font-size: 14px;
+  color: #93c5fd;
+  line-height: 1.7;
+}
+
+/* Responsive for services page */
+@media (max-width: 768px) {
+  .sp-hero-content h1 { font-size: 2rem; }
+
+  .sp-stat-divider { display: none; }
+  .sp-stat { padding: 10px 16px; }
+  .sp-stat strong { font-size: 1.5rem; }
+
+  .sp-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+  .sp-hero { padding: 68px 20px 60px; }
+  .sp-hero-content h1 { font-size: 1.75rem; }
+}
