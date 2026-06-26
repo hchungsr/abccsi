@@ -41,7 +41,7 @@ export default function HomePage() {
             <div className="reason-card">
               <div className="reason-icon">⚡</div>
               <h3>Fast Turnaround</h3>
-              <p>Most repairs are done same day or within 24–48 hours. No waiting weeks for a new appliance to be delivered.</p>
+              <p>Most diagnostics are done same day. Simple repairs are often completed within 24–48 hours if parts are in stock. If parts need to be ordered, we will give you an estimated timeline upfront — no surprises.</p>
             </div>
             <div className="reason-card">
               <div className="reason-icon">🌎</div>
