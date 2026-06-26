@@ -4,7 +4,7 @@ import Footer from './Footer'
 import './App.css'
 
 // ─── TOGGLE: set to true when ready to make this page public ───
-const BUSINESS_PAGE_ENABLED = false
+const BUSINESS_PAGE_ENABLED = true
 // ────────────────────────────────────────────────────────────────
 
 const services = [
