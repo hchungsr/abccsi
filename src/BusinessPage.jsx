@@ -7,6 +7,21 @@ import './App.css'
 const BUSINESS_PAGE_ENABLED = true
 // ────────────────────────────────────────────────────────────────
 
+const seoServices = [
+  { icon: '📍', title: 'Google Business Profile', desc: 'Optimize your listing to dominate the local map pack and get more calls directly from Google.' },
+  { icon: '🔍', title: 'Local Keyword Research', desc: 'We find the exact searches your customers are making and build your strategy around them.' },
+  { icon: '📄', title: 'On-Page SEO', desc: 'Optimize your website content, titles, and structure so Google knows exactly what you offer.' },
+  { icon: '📋', title: 'Citation Building', desc: 'Get your business listed consistently across Yelp, Bing, Apple Maps, and 50+ directories.' },
+  { icon: '⭐', title: 'Review Strategy', desc: 'Build a steady stream of 5-star reviews that boost your rankings and convert new customers.' },
+  { icon: '📊', title: 'Monthly Reporting', desc: 'Clear, plain-English reports showing exactly where you rank and how your traffic is growing.' },
+]
+
+const steps = [
+  { num: '01', title: 'Free SEO Audit', desc: 'We analyze your current online presence — Google ranking, website, reviews, and competitors — at no cost.' },
+  { num: '02', title: 'Custom Local Strategy', desc: 'We build a targeted plan focused on the keywords and platforms that will bring you the most local customers.' },
+  { num: '03', title: 'Rank, Grow & Get Calls', desc: 'We execute the strategy and track results monthly. More visibility means more calls, more customers, more revenue.' },
+]
+
 const services = [
   {
     icon: '🌐',
@@ -97,6 +112,43 @@ export default function BusinessPage() {
           <div className="hero-btns">
             <a href="/#contact" className="btn-primary">Get a Free Consultation</a>
             <a href="tel:3605398486" className="btn-outline">Call (360) 539-8486</a>
+          </div>
+        </div>
+      </section>
+
+      {/* LOCAL SEO */}
+      <section className="section section-dark">
+        <div className="container">
+          <h2 className="section-title section-title--light">Get Found by More Local Customers</h2>
+          <p className="section-intro">97% of consumers search online to find local businesses. If your business isn't showing up on Google, you're handing those customers to your competitors. We specialize in local SEO for Olympia-area businesses.</p>
+          <div className="seo-grid">
+            {seoServices.map(s => (
+              <div key={s.title} className="seo-card">
+                <div className="seo-icon">{s.icon}</div>
+                <h3>{s.title}</h3>
+                <p>{s.desc}</p>
+              </div>
+            ))}
+          </div>
+          <div className="seo-cta-row">
+            <a href="/#contact" className="btn-primary">Get a Free SEO Audit</a>
+            <p className="seo-cta-sub">No contract. No obligation. Just a clear picture of where you stand.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* HOW IT WORKS */}
+      <section className="section section-alt">
+        <div className="container">
+          <h2 className="section-title">How It Works</h2>
+          <div className="steps-grid">
+            {steps.map(s => (
+              <div key={s.num} className="step-card">
+                <div className="step-num">{s.num}</div>
+                <h3>{s.title}</h3>
+                <p>{s.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
