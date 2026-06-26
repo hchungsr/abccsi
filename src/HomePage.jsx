@@ -1,74 +1,8 @@
-import { useState } from 'react'
 import Navbar from './Navbar'
 import Footer from './Footer'
 import './App.css'
 
-const faqs = [
-  {
-    q: "What is local SEO and why does my business need it?",
-    a: "Local SEO helps your business appear in Google search results and Google Maps when nearby customers search for your services. If your business doesn't show up on the first page of Google, you're losing customers to competitors who do. We help you rank where it counts."
-  },
-  {
-    q: "How long does it take to see results from local SEO?",
-    a: "Most businesses start seeing measurable improvements in 60–90 days. Local SEO builds momentum over time — the longer we work together, the stronger and more consistent your rankings become."
-  },
-  {
-    q: "Can you help my business show up on Google Maps?",
-    a: "Absolutely. Google Business Profile optimization is one of the most powerful things we do. We optimize your listing so you appear in the local map pack — those top 3 results that show up for nearly every local search."
-  },
-  {
-    q: "How much does your local SEO service cost?",
-    a: "Our SEO packages are tailored to your business size and goals. We offer honest, transparent pricing with no long-term contracts. Call us at (360) 539-8486 for a free consultation and custom quote."
-  },
-  {
-    q: "How much does computer repair cost in Olympia, WA?",
-    a: "Our repair costs vary depending on the issue. We offer honest, reasonable pricing with no hidden fees. Call us at (360) 539-8486 for a free estimate on your specific problem."
-  },
-  {
-    q: "How long does a typical computer repair take?",
-    a: "Most repairs are completed quickly — many same day or within 24–48 hours. We know you depend on your computer, so we work efficiently to get it back to you as fast as possible."
-  },
-  {
-    q: "Do you repair both PC and Mac computers?",
-    a: "Yes! We repair all major brands including Dell, HP, Apple, Lenovo, Asus, Acer, Samsung, and more. Whether it's a PC, Mac, laptop, or tablet, we can help."
-  },
-  {
-    q: "Can you remove viruses and malware from my computer?",
-    a: "Absolutely. Virus and malware removal is one of our most common services. We thoroughly clean your system and help protect it from future infections."
-  },
-  {
-    q: "Do you offer pickup and drop-off service?",
-    a: "Yes! We offer convenient pickup and drop-off service in the Olympia area. Call us at (360) 539-8486 to arrange a time that works for you."
-  },
-]
-
-const seoServices = [
-  { icon: '📍', title: 'Google Business Profile', desc: 'Optimize your listing to dominate the local map pack and get more calls directly from Google.' },
-  { icon: '🔍', title: 'Local Keyword Research', desc: 'We find the exact searches your customers are making and build your strategy around them.' },
-  { icon: '📄', title: 'On-Page SEO', desc: 'Optimize your website content, titles, and structure so Google knows exactly what you offer.' },
-  { icon: '📋', title: 'Citation Building', desc: 'Get your business listed consistently across Yelp, Bing, Apple Maps, and 50+ directories.' },
-  { icon: '⭐', title: 'Review Strategy', desc: 'Build a steady stream of 5-star reviews that boost your rankings and convert new customers.' },
-  { icon: '📊', title: 'Monthly Reporting', desc: 'Clear, plain-English reports showing exactly where you rank and how your traffic is growing.' },
-]
-
-const steps = [
-  { num: '01', title: 'Free SEO Audit', desc: 'We analyze your current online presence — Google ranking, website, reviews, and competitors — at no cost.' },
-  { num: '02', title: 'Custom Local Strategy', desc: 'We build a targeted plan focused on the keywords and platforms that will bring you the most local customers.' },
-  { num: '03', title: 'Rank, Grow & Get Calls', desc: 'We execute the strategy and track results monthly. More visibility means more calls, more customers, more revenue.' },
-]
-
-function StarRating({ count = 5 }) {
-  return (
-    <div className="stars" aria-label={`${count} out of 5 stars`}>
-      {Array.from({ length: count }).map((_, i) => <span key={i}>★</span>)}
-    </div>
-  )
-}
-
 export default function HomePage() {
-  const [openFaq, setOpenFaq] = useState(null)
-  const toggleFaq = (i) => setOpenFaq(openFaq === i ? null : i)
-
   return (
     <>
       <Navbar />
@@ -76,41 +10,49 @@ export default function HomePage() {
       {/* HERO */}
       <section className="hero">
         <div className="hero-content">
-          <p className="hero-eyebrow">Olympia, WA · Trusted Since 1993</p>
-          <h1>Tech Support &amp; Local SEO<br />for Olympia Businesses</h1>
-          <p className="hero-sub">
-            We fix your computers <em>and</em> help your business get found on Google.
-            One trusted local partner for all your technology and marketing needs.
-          </p>
+          <h1>Don't Throw It Away —<br />We Can Fix It!</h1>
+          <p className="hero-sub">Is your computer slow? Laptop broken? Microwave stopped working?<br />Before you spend money on a new one, let us take a look — we can probably fix it for much less!</p>
+          <div className="hero-problems">
+            <div className="hero-problem">💻 Slow or Broken Computer</div>
+            <div className="hero-problem">🖥️ Laptop Won't Turn On</div>
+            <div className="hero-problem">🦠 Virus or Pop-Up Problems</div>
+            <div className="hero-problem">📱 Tablet Issues</div>
+            <div className="hero-problem">🍽️ Microwave Not Working</div>
+            <div className="hero-problem">🔥 Oven or Stove Problems</div>
+          </div>
+          <p className="hero-exp">⭐ Over 30 Years Experience — Honest, Affordable Repairs ⭐</p>
           <div className="hero-btns">
-            <a href="tel:3605398486" className="btn-primary">Call (360) 539-8486</a>
-            <a href="#marketing" className="btn-outline btn-outline-green">Free SEO Audit</a>
-            <a href="#services" className="btn-outline">Computer Repair</a>
+            <a href="tel:3605398486" className="btn-primary">📞 Call Us: (360) 539-8486</a>
+            <a href="#contact" className="btn-outline">Send Us a Message</a>
           </div>
         </div>
       </section>
 
-      {/* TRUST BAR */}
-      <section className="trust-bar">
-        <div className="container trust-bar-grid">
-          <div className="trust-item">
-            <strong>30+</strong>
-            <span>Years in Business</span>
-          </div>
-          <div className="trust-divider" />
-          <div className="trust-item">
-            <strong>MCSE</strong>
-            <span>Certified Technicians</span>
-          </div>
-          <div className="trust-divider" />
-          <div className="trust-item">
-            <strong>Local SEO</strong>
-            <span>Google Ranking Experts</span>
-          </div>
-          <div className="trust-divider" />
-          <div className="trust-item">
-            <strong>Free</strong>
-            <span>Estimates &amp; SEO Audits</span>
+      {/* WHY FIX INSTEAD OF BUY */}
+      <section className="section section-alt">
+        <div className="container">
+          <h2 className="section-title">Why Repair Instead of Replace?</h2>
+          <div className="reasons-grid">
+            <div className="reason-card">
+              <div className="reason-icon">💰</div>
+              <h3>Save Money</h3>
+              <p>A repair often costs a fraction of buying new. Why spend $500 on a new laptop when we can fix yours for much less?</p>
+            </div>
+            <div className="reason-card">
+              <div className="reason-icon">⚡</div>
+              <h3>Fast Turnaround</h3>
+              <p>Most repairs are done same day or within 24–48 hours. No waiting weeks for a new appliance to be delivered.</p>
+            </div>
+            <div className="reason-card">
+              <div className="reason-icon">🌎</div>
+              <h3>Better for the Environment</h3>
+              <p>Repairing what you have keeps working electronics out of landfills. A greener choice for our community.</p>
+            </div>
+            <div className="reason-card">
+              <div className="reason-icon">🤝</div>
+              <h3>Honest Advice</h3>
+              <p>We'll always tell you honestly if something isn't worth fixing. No surprise charges or unnecessary repairs.</p>
+            </div>
           </div>
         </div>
       </section>
@@ -118,52 +60,40 @@ export default function HomePage() {
       {/* SERVICES */}
       <section id="services" className="section">
         <div className="container">
-          <span className="section-tag">What We Do</span>
-          <h2 className="section-title">Our Services</h2>
+          <h2 className="section-title">What We Fix</h2>
           <div className="services-grid">
-            <div className="service-card service-card--featured">
-              <div className="service-card-badge">Internet Marketing</div>
-              <div className="service-icon">📈</div>
-              <h3>Local SEO &amp; Internet Marketing</h3>
-              <ul>
-                <li>Google Business Profile optimization</li>
-                <li>Local search ranking &amp; visibility</li>
-                <li>On-page website SEO</li>
-                <li>Citation &amp; directory listings</li>
-                <li>Review generation strategy</li>
-                <li>Monthly ranking reports</li>
-              </ul>
-              <a href="/services" className="service-cta">See All Marketing Services →</a>
-            </div>
-
             <div className="service-card">
               <div className="service-icon">💻</div>
-              <h3>PC, Mac &amp; Tablet Repair</h3>
+              <h3>Computers &amp; Laptops</h3>
               <ul>
-                <li>Screen replacement</li>
-                <li>Keyboard &amp; battery replacement</li>
-                <li>RAM &amp; storage upgrades</li>
-                <li>Hardware diagnostics &amp; repair</li>
+                <li>Computer running slow</li>
+                <li>Won't turn on</li>
+                <li>Broken screen</li>
+                <li>Keyboard or battery replacement</li>
+                <li>Virus &amp; pop-up removal</li>
+                <li>Lost files &amp; data recovery</li>
               </ul>
             </div>
-
             <div className="service-card">
-              <div className="service-icon">🛡️</div>
-              <h3>IT &amp; Tech Support</h3>
+              <div className="service-icon">📱</div>
+              <h3>Tablets &amp; IT Support</h3>
               <ul>
-                <li>Virus &amp; malware removal</li>
-                <li>Data recovery</li>
-                <li>OS upgrades &amp; reinstallation</li>
-                <li>Network &amp; Wi-Fi troubleshooting</li>
+                <li>Tablet repair</li>
+                <li>Wi-Fi &amp; internet problems</li>
+                <li>Email setup help</li>
+                <li>Windows upgrades</li>
+                <li>Printer setup</li>
+                <li>General tech help</li>
               </ul>
             </div>
-
             <div className="service-card">
               <div className="service-icon">🔧</div>
-              <h3>Home Appliance Repair</h3>
+              <h3>Home Appliances</h3>
               <ul>
-                <li>Microwave repair</li>
-                <li>Oven &amp; stove repair</li>
+                <li>Microwave not heating</li>
+                <li>Microwave sparking or noisy</li>
+                <li>Oven not working</li>
+                <li>Stove burner problems</li>
                 <li>General appliance diagnostics</li>
               </ul>
             </div>
@@ -171,87 +101,43 @@ export default function HomePage() {
           <div className="brands">
             <p>Computer brands we service:</p>
             <div className="brand-list">
-              {['Dell', 'HP', 'Apple', 'Lenovo', 'Asus', 'Acer', 'Samsung', 'and more'].map(b => (
-                <span key={b}>{b}</span>
-              ))}
+              <span>Dell</span><span>HP</span><span>Apple</span><span>Lenovo</span><span>Asus</span><span>Acer</span><span>Samsung</span><span>and more</span>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* LOCAL SEO SECTION */}
-      <section id="marketing" className="section section-dark">
-        <div className="container">
-          <span className="section-tag section-tag--light">Internet Marketing</span>
-          <h2 className="section-title section-title--light">Get Found by More Local Customers</h2>
-          <p className="section-intro">
-            97% of consumers search online to find local businesses. If your business isn't
-            showing up on Google, you're handing those customers to your competitors.
-            We specialize in local SEO for Olympia-area businesses — helping you rank higher,
-            get more calls, and grow your revenue.
-          </p>
-          <div className="seo-grid">
-            {seoServices.map(s => (
-              <div key={s.title} className="seo-card">
-                <div className="seo-icon">{s.icon}</div>
-                <h3>{s.title}</h3>
-                <p>{s.desc}</p>
-              </div>
-            ))}
-          </div>
-          <div className="seo-cta-row">
-            <a href="#contact" className="btn-green">Get a Free SEO Audit</a>
-            <p className="seo-cta-sub">No contract. No obligation. Just a clear picture of where you stand.</p>
-          </div>
-        </div>
-      </section>
-
-      {/* HOW IT WORKS */}
-      <section className="section section-alt">
-        <div className="container">
-          <span className="section-tag">Simple Process</span>
-          <h2 className="section-title">How Local SEO Works With Us</h2>
-          <div className="steps-grid">
-            {steps.map(s => (
-              <div key={s.num} className="step-card">
-                <div className="step-num">{s.num}</div>
-                <h3>{s.title}</h3>
-                <p>{s.desc}</p>
-              </div>
-            ))}
           </div>
         </div>
       </section>
 
       {/* ABOUT */}
-      <section id="about" className="section">
+      <section id="about" className="section section-alt">
         <div className="container about-container">
           <div className="about-text">
-            <span className="section-tag" style={{ marginBottom: '12px', display: 'inline-block' }}>About Us</span>
-            <h2 className="section-title" style={{ textAlign: 'left' }}>Your Local Tech &amp; Marketing Partner</h2>
-            <p>ABC Computer Solutions has been serving the Greater Olympia area for over 30 years. We started as a computer repair and IT support company — and we've grown into a full-service technology partner that also helps local businesses get found online.</p>
-            <p>Our MCSE-certified technicians handle everything from broken screens to complex virus removal. Our marketing team helps restaurants, retailers, service providers, and other local businesses rank on Google and attract more customers.</p>
-            <p>We know Olympia. We live here. We understand what local customers search for — and we put your business in front of them.</p>
+            <h2 className="section-title">About ABC Computer Solutions</h2>
+            <p>We are a local family-friendly repair shop serving the Greater Olympia area for <strong>over 30 years</strong>. We speak plain English — no confusing tech talk. We explain what's wrong, what it will cost, and how long it will take — before we do anything.</p>
+            <p>Whether you're a senior who needs help with a slow computer, a parent whose kid broke a laptop, or a homeowner with a broken microwave — we treat every customer with patience, respect, and honesty.</p>
+            <p>We offer convenient <strong>pickup and drop-off service</strong> so you don't have to struggle carrying heavy equipment.</p>
             <div className="badges">
               <div className="badge">✅ MCSE Certified</div>
               <div className="badge">✅ 30+ Years Experience</div>
-              <div className="badge badge--green">📈 Local SEO Experts</div>
-              <div className="badge badge--green">📍 Olympia-Based</div>
+              <div className="badge">✅ No Tech Jargon</div>
+              <div className="badge">✅ Free Estimates</div>
+              <div className="badge">✅ Pickup &amp; Drop-Off</div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* CTA BANNER */}
-      <section className="cta-banner">
-        <div className="container cta-inner">
-          <div>
-            <h2>Is your business invisible on Google?</h2>
-            <p>Get a free local SEO audit and see exactly where you stand — and how to fix it.</p>
-          </div>
-          <div className="cta-btns">
-            <a href="tel:3605398486" className="btn-primary cta-btn">Call (360) 539-8486</a>
-            <a href="#contact" className="btn-outline-white cta-btn">Request Free Audit</a>
+      {/* HOURS */}
+      <section id="hours" className="section">
+        <div className="container">
+          <h2 className="section-title">Hours of Operation</h2>
+          <div className="hours-table">
+            <div className="hours-row"><span className="hours-day">Monday</span><span className="hours-time">9:00 AM – 5:00 PM</span></div>
+            <div className="hours-row"><span className="hours-day">Tuesday</span><span className="hours-time">9:00 AM – 5:00 PM</span></div>
+            <div className="hours-row"><span className="hours-day">Wednesday</span><span className="hours-time">9:00 AM – 5:00 PM</span></div>
+            <div className="hours-row"><span className="hours-day">Thursday</span><span className="hours-time">9:00 AM – 5:00 PM</span></div>
+            <div className="hours-row"><span className="hours-day">Friday</span><span className="hours-time">9:00 AM – 5:00 PM</span></div>
+            <div className="hours-row closed"><span className="hours-day">Saturday</span><span className="hours-time">Closed</span></div>
+            <div className="hours-row closed"><span className="hours-day">Sunday</span><span className="hours-time">Closed</span></div>
           </div>
         </div>
       </section>
@@ -259,23 +145,19 @@ export default function HomePage() {
       {/* TESTIMONIALS */}
       <section id="testimonials" className="section section-alt">
         <div className="container">
-          <span className="section-tag">Customer Reviews</span>
           <h2 className="section-title">What Our Customers Say</h2>
           <div className="testimonials-grid">
             <div className="testimonial-card">
-              <StarRating />
               <p>"I've been a client for multiple years and always receive personal attention and quick turnaround. Reasonably priced and very trustworthy!"</p>
               <span>— Satisfied Customer, Olympia WA</span>
             </div>
             <div className="testimonial-card">
-              <StarRating />
               <p>"They fixed my laptop screen the same day I brought it in. Excellent service and very professional. Highly recommend!"</p>
-              <span>— Local Customer, Olympia WA</span>
+              <span>— Local Customer</span>
             </div>
             <div className="testimonial-card">
-              <StarRating />
               <p>"Got rid of a nasty virus that two other shops couldn't fix. Honest people who know what they're doing."</p>
-              <span>— Returning Customer, Lacey WA</span>
+              <span>— Returning Customer</span>
             </div>
           </div>
         </div>
@@ -284,110 +166,102 @@ export default function HomePage() {
       {/* FAQ */}
       <section id="faq" className="section">
         <div className="container">
-          <span className="section-tag">Common Questions</span>
           <h2 className="section-title">Frequently Asked Questions</h2>
           <div className="faq-list">
-            {faqs.map((item, i) => (
-              <div key={i} className={`faq-item ${openFaq === i ? 'open' : ''}`}>
-                <button className="faq-question" onClick={() => toggleFaq(i)} aria-expanded={openFaq === i}>
-                  <span>{item.q}</span>
-                  <span className="faq-chevron">{openFaq === i ? '▲' : '▼'}</span>
-                </button>
-                {openFaq === i && <p className="faq-answer">{item.a}</p>}
-              </div>
-            ))}
+            <div className="faq-item">
+              <h3>How do I know if my computer is worth fixing?</h3>
+              <p>Call us or bring it in — we'll give you a free estimate. As a rule of thumb, if the repair costs less than half the price of a new one, it's usually worth fixing. We'll always give you our honest opinion.</p>
+            </div>
+            <div className="faq-item">
+              <h3>How much does computer repair cost in Olympia, WA?</h3>
+              <p>It depends on the problem. We offer honest, reasonable pricing with no hidden fees. Call us at (360) 539-8486 for a free estimate.</p>
+            </div>
+            <div className="faq-item">
+              <h3>How long does a repair take?</h3>
+              <p>Most repairs are done same day or within 24–48 hours. We know you depend on your devices, so we work quickly.</p>
+            </div>
+            <div className="faq-item">
+              <h3>Do you repair both PC and Mac computers?</h3>
+              <p>Yes! We repair all major brands — Dell, HP, Apple, Lenovo, Asus, Acer, Samsung, and more.</p>
+            </div>
+            <div className="faq-item">
+              <h3>Can you come to my home to pick up my computer?</h3>
+              <p>Yes! We offer convenient pickup and drop-off service in the Olympia area. Call us at (360) 539-8486 to arrange a time.</p>
+            </div>
+            <div className="faq-item">
+              <h3>Is my microwave worth repairing?</h3>
+              <p>Often yes! Microwaves are frequently repairable for much less than buying a new one. Bring it in and we'll take a look for free.</p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* CONTACT + HOURS */}
+      {/* REVIEW */}
+      <section className="section review-section">
+        <div className="container review-container">
+          <div className="review-icon">⭐</div>
+          <h2>Happy With Our Service?</h2>
+          <p>Your review helps other customers in Olympia find us and trust us. It only takes 1 minute and means the world to us!</p>
+          <a href="https://g.page/r/CYejZ5UZT8zwEBM/review" target="_blank" rel="noopener noreferrer" className="btn-review">
+            ⭐ Leave Us a Google Review
+          </a>
+          <div className="review-steps">
+            <p><strong>How to leave a review (it's easy!):</strong></p>
+            <ol>
+              <li>Click the button above</li>
+              <li>Sign in to your Google account (Gmail)</li>
+              <li>Click the stars to rate us</li>
+              <li>Write a few words about your experience</li>
+              <li>Click <strong>Post</strong> — done!</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      {/* CONTACT */}
       <section id="contact" className="section section-alt">
         <div className="container">
-          <span className="section-tag">Get In Touch</span>
           <h2 className="section-title">Contact Us</h2>
           <div className="contact-grid">
-            <div className="contact-left">
-              <div className="contact-info">
-                <div className="contact-item">
-                  <span className="contact-icon">📞</span>
-                  <div>
-                    <strong>Phone</strong>
-                    <p><a href="tel:3605398486">(360) 539-8486</a></p>
-                  </div>
-                </div>
-                <div className="contact-item">
-                  <span className="contact-icon">📍</span>
-                  <div>
-                    <strong>Address</strong>
-                    <p>417 Stonewood DR SE<br />Olympia, WA 98513</p>
-                  </div>
-                </div>
-                <div className="contact-item">
-                  <span className="contact-icon">📧</span>
-                  <div>
-                    <strong>Email</strong>
-                    <p><a href="mailto:henry.abccomputers@gmail.com">henry.abccomputers@gmail.com</a></p>
-                  </div>
-                </div>
-                <div className="contact-item">
-                  <span className="contact-icon">🚗</span>
-                  <div>
-                    <strong>Pickup &amp; Drop-Off</strong>
-                    <p>Convenient service available — call to arrange.</p>
-                  </div>
+            <div className="contact-info">
+              <div className="contact-item">
+                <span className="contact-icon">📞</span>
+                <div>
+                  <strong>Phone</strong>
+                  <p><a href="tel:3605398486">(360) 539-8486</a></p>
                 </div>
               </div>
-
-              <div className="hours-card">
-                <h3 className="hours-title">Hours of Operation</h3>
-                <div className="hours-table">
-                  {[
-                    ['Monday',    '9:00 AM – 5:00 PM'],
-                    ['Tuesday',   '9:00 AM – 5:00 PM'],
-                    ['Wednesday', '9:00 AM – 5:00 PM'],
-                    ['Thursday',  '9:00 AM – 5:00 PM'],
-                    ['Friday',    '9:00 AM – 5:00 PM'],
-                    ['Saturday',  null],
-                    ['Sunday',    null],
-                  ].map(([day, time]) => (
-                    <div key={day} className={`hours-row ${!time ? 'closed' : ''}`}>
-                      <span className="hours-day">{day}</span>
-                      <span className="hours-time">{time ?? 'Closed'}</span>
-                    </div>
-                  ))}
+              <div className="contact-item">
+                <span className="contact-icon">📧</span>
+                <div>
+                  <strong>Email</strong>
+                  <p><a href="mailto:henry.abccomputers@gmail.com">henry.abccomputers@gmail.com</a></p>
+                </div>
+              </div>
+              <div className="contact-item">
+                <span className="contact-icon">📍</span>
+                <div>
+                  <strong>Address</strong>
+                  <p>417 Stonewood DR SE<br />Olympia, WA 98513</p>
+                </div>
+              </div>
+              <div className="contact-item">
+                <span className="contact-icon">🚗</span>
+                <div>
+                  <strong>Pickup &amp; Drop-Off</strong>
+                  <p>Convenient pickup and drop-off service available. Call us to arrange.</p>
                 </div>
               </div>
             </div>
-
-            <div className="contact-right">
-              <form className="contact-form" action="https://formspree.io/f/xjglboge" method="POST">
-                <h3>Send Us a Message</h3>
-                <input type="text" name="name" placeholder="Your Name" required />
-                <input type="tel" name="phone" placeholder="Your Phone Number" />
-                <input type="email" name="email" placeholder="Your Email" />
-                <select name="service">
-                  <option value="">I need help with… (optional)</option>
-                  <option value="seo">Local SEO / Internet Marketing</option>
-                  <option value="repair">Computer Repair</option>
-                  <option value="it">IT Support</option>
-                  <option value="appliance">Appliance Repair</option>
-                  <option value="other">Other</option>
-                </select>
-                <textarea name="message" placeholder="Tell us more about your situation..." rows="4" required />
-                <input type="hidden" name="_subject" value="New message from abccsi.com" />
-                <button type="submit" className="btn-primary">Send Message</button>
-              </form>
-
-              <div className="map-container">
-                <iframe
-                  title="ABC Computer Solutions Location"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2728.7!2d-122.8542!3d46.9965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDbCsDU5JzQ3LjQiTiAxMjLCsDUxJzE1LjEiVw!5e0!3m2!1sen!2sus!4v1"
-                  allowFullScreen=""
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                />
-              </div>
-            </div>
+            <form className="contact-form" action="https://formspree.io/f/xjglboge" method="POST">
+              <h3>Send Us a Message</h3>
+              <input type="text" name="name" placeholder="Your Name" required />
+              <input type="tel" name="phone" placeholder="Your Phone Number" />
+              <input type="email" name="email" placeholder="Your Email" />
+              <textarea name="message" placeholder="Describe your issue..." rows="4" required></textarea>
+              <input type="hidden" name="_subject" value="New message from abccsi.com" />
+              <button type="submit" className="btn-primary">Send Message</button>
+            </form>
           </div>
         </div>
       </section>
