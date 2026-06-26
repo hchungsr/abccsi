@@ -19,9 +19,9 @@ export default function Navbar() {
         </button>
 
         <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
-          <li><a href="/services" onClick={closeMenu}>Services</a></li>
-          <li><a href="/#marketing" onClick={closeMenu}>Local SEO</a></li>
+          <li><a href="/#services" onClick={closeMenu}>Services</a></li>
           <li><a href="/#about" onClick={closeMenu}>About</a></li>
+          <li><a href="/#hours" onClick={closeMenu}>Hours</a></li>
           <li><a href="/#testimonials" onClick={closeMenu}>Reviews</a></li>
           <li><a href="/#faq" onClick={closeMenu}>FAQ</a></li>
           <li><a href="/#contact" onClick={closeMenu}>Contact</a></li>
