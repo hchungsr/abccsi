@@ -20,22 +20,11 @@ export default function HomePage() {
             <div className="hero-problem">🍽️ Microwave Not Working</div>
             <div className="hero-problem">🔥 Oven or Stove Problems</div>
           </div>
-          <p className="hero-exp">⭐ Over 30 Years Experience — Honest, Affordable Repairs ⭐</p>
+          <p className="hero-exp">⭐ Over 30 Years Experience — Honest, Affordable, and Competent Repairs ⭐</p>
           <div className="hero-btns">
             <a href="tel:3605398486" className="btn-primary">📞 Call Us: (360) 539-8486</a>
             <a href="#contact" className="btn-outline">Send Us a Message</a>
           </div>
-        </div>
-      </section>
-
-      {/* FREE DIAGNOSTIC BANNER */}
-      <section className="free-diag-banner">
-        <div className="container free-diag-container">
-          <div className="free-diag-text">
-            <h2>🎉 Free Diagnostic for New Customers!</h2>
-            <p>Not sure what's wrong with your device? Bring it in and we'll diagnose it for free — no obligation. Call us today for a free estimate and competent service you can trust.</p>
-          </div>
-          <a href="tel:3605398486" className="btn-primary free-diag-btn">📞 Call (360) 539-8486</a>
         </div>
       </section>
 
