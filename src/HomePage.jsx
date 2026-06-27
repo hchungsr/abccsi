@@ -89,6 +89,7 @@ export default function HomePage() {
               </ul>
             </div>
             <div className="service-card">
+              <img src="/microwave.jpg" alt="Home Appliance Repair" className="service-img" />
               <div className="service-icon">🔧</div>
               <h3>Home Appliances</h3>
               <ul>
