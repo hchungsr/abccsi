@@ -447,6 +447,44 @@ a {
   line-height: 2;
 }
 
+/* FREE DIAGNOSTIC BANNER */
+.free-diag-banner {
+  background: linear-gradient(135deg, #1a6dd4, #0a2d6e);
+  padding: 36px 20px;
+}
+
+.free-diag-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.free-diag-text h2 {
+  color: #ffd966;
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+}
+
+.free-diag-text p {
+  color: #c5daf5;
+  font-size: 1rem;
+  max-width: 600px;
+}
+
+.free-diag-btn {
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .free-diag-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
 /* REASONS */
 .reasons-grid {
   display: grid;
