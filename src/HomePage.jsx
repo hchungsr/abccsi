@@ -63,6 +63,7 @@ export default function HomePage() {
           <h2 className="section-title">What We Fix</h2>
           <div className="services-grid">
             <div className="service-card">
+              <img src="/pcrepair.jpg" alt="PC and Mac Repair" className="service-img" />
               <div className="service-icon">💻</div>
               <h3>PC / Mac &amp; Tablets Repairs</h3>
               <ul>
@@ -75,6 +76,7 @@ export default function HomePage() {
               </ul>
             </div>
             <div className="service-card">
+              <img src="/consulting.jpg" alt="IT Tech Support" className="service-img" />
               <div className="service-icon">🛡️</div>
               <h3>IT / Tech Support and Services</h3>
               <ul>
@@ -110,6 +112,7 @@ export default function HomePage() {
       {/* ABOUT */}
       <section id="about" className="section section-alt">
         <div className="container about-container">
+          <img src="/olympia.jpg" alt="Serving Olympia WA" className="about-img" />
           <div className="about-text">
             <h2 className="section-title">About ABC Computer Solutions</h2>
             <p>We are a local family-friendly repair shop serving the Greater Olympia area for <strong>over 30 years</strong>. We speak plain English — no confusing tech talk. We explain what's wrong, what it will cost, and how long it will take — before we do anything.</p>
