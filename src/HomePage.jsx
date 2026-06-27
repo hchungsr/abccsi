@@ -64,26 +64,26 @@ export default function HomePage() {
           <div className="services-grid">
             <div className="service-card">
               <div className="service-icon">💻</div>
-              <h3>Computers &amp; Laptops</h3>
+              <h3>PC / Mac &amp; Tablets Repairs</h3>
               <ul>
-                <li>Computer running slow</li>
-                <li>Won't turn on</li>
-                <li>Broken screen</li>
-                <li>Keyboard or battery replacement</li>
-                <li>Virus &amp; pop-up removal</li>
-                <li>Lost files &amp; data recovery</li>
+                <li>Laptop and Desktop Repairs</li>
+                <li>Screen LCD Repair</li>
+                <li>Keyboard and Hinge Repairs</li>
+                <li>Battery and Charging Port Replacements</li>
+                <li>Fan and Heat Sink Repairs</li>
+                <li>RAM and HDD/SSD Upgrades</li>
               </ul>
             </div>
             <div className="service-card">
-              <div className="service-icon">📱</div>
-              <h3>Tablets &amp; IT Support</h3>
+              <div className="service-icon">🛡️</div>
+              <h3>IT / Tech Support and Services</h3>
               <ul>
-                <li>Tablet repair</li>
-                <li>Wi-Fi &amp; internet problems</li>
-                <li>Email setup help</li>
-                <li>Windows upgrades</li>
-                <li>Printer setup</li>
-                <li>General tech help</li>
+                <li>Virus and Spyware Removal</li>
+                <li>Data Recovery and Backup</li>
+                <li>Windows/macOS Upgrade and Support</li>
+                <li>Transfer Data from Old to New Computer</li>
+                <li>Booting or Login Issue Support</li>
+                <li>Computer Running Slow or Any other Issues...</li>
               </ul>
             </div>
             <div className="service-card">
